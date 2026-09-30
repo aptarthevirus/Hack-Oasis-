@@ -62,10 +62,7 @@ function Reveal({
         if (!node) return;
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.unobserve(node);
-                }
+                 setVisible (entry.isIntersecting);
             },
             {threshold: 0.15}
         );
@@ -76,8 +73,8 @@ function Reveal({
     return (
         <div
          ref= {ref}
-         className={`transition-all duration-700 ease-out ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+         className={`transition-all duration-500 ease-out ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 scale-98"
          } ${className}`}
          >
             {children}
@@ -130,8 +127,10 @@ export default function Home() {
         className={`${playfair.variable} ${pixel.variable} ${kavoon.variable} ${marykate.variable} relative`}
     >
         <WelcomeIntro />
-        <div
-        className="fixed left-1/2 top-0 z-50 w-32 -translate-x-1/2 sm:w-44"
+        
+<section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <div
+        className="absolute left-4 top-0 z-50 w-28 sm:w-32"
         style={{ paddingTop: "env(safe-area-inset-top, 0px)"}}
         >
             <Image
@@ -144,7 +143,6 @@ export default function Home() {
             />
         </div>
 
-<section className="relative flex min-h-screen items-center justify-center overflow-hidden">
     <video
     autoPlay
     muted
@@ -202,7 +200,7 @@ export default function Home() {
 
 
 <section
-className= "relative flex min-h-screen items-center bg-cover bg-center px-6 py-24 sm:px-16"
+className= "relative flex bg-cover bg-center px-6 py-12 sm:px-16"
 style={{backgroundImage: "url('/section-bg5.jpg')" , backgroundAttachment: "fixed"}}
 >
     <Reveal className="max-w-3xl">
@@ -245,7 +243,7 @@ style={{backgroundImage: "url('/section-bg5.jpg')" , backgroundAttachment: "fixe
 </section>
 
 <section
-className= "relative flex min-h-screen items-center justify-end bg-cover bg-center px-6 py-24 sm:px-16"
+className= "relative flex justify-end bg-cover bg-center px-6 py-12 sm:px-16"
 style={{backgroundImage: "url('/section-bg5.jpg')" , backgroundAttachment: "fixed"}}
 >
     <Reveal className="max-w-3xl">
@@ -283,7 +281,7 @@ style={{backgroundImage: "url('/section-bg5.jpg')" , backgroundAttachment: "fixe
 
 
 <section
- className="relative flex min-h-screen items-center bg-cover bg-center px-6 py-24 sm:px-16"
+ className="relative flex bg-cover bg-center px-6 py-12 sm:px-16"
  style={{backgroundImage: "url('/section-bg5.jpg')", backgroundAttachment: "fixed"}}
  >
     <Reveal className="w-full max-w-2xl mx-auto text-center">
@@ -312,7 +310,7 @@ style={{backgroundImage: "url('/section-bg5.jpg')" , backgroundAttachment: "fixe
 
 
  <section
- className="relative flex min-h-screen items-center bg-cover bg-center px-6 py-24 sm:px-16"
+ className="relative flex bg-cover bg-center px-6 py-12 sm:px-16"
  style={{backgroundImage: "url('/section-bg5.jpg')", backgroundAttachment: "fixed"}}
  >
     <Reveal>
