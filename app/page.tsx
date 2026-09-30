@@ -184,7 +184,7 @@ export default function Home() {
           </p>
 
           <Link 
-          href= "https://rsvp.hackclub.community/hack-oasis/"
+          href="https://rsvp.soon.it/habibi-its-hack-oasis"
           className="mt-10 inline-block border-4 border-white bg-teal-400 px-8 py-4 text-white transition-all duration-150 ease-out hover:-translate-y-1 hover:scale-105 hover:bg-teal-300 active:translate-x-[2px] active:translate-y-[2px] active:scale-100 active:bg-teal-500 active:shadow-none"
           style={{
             fontFamily: "var(--font-pixel)",
